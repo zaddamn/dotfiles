@@ -1,0 +1,45 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["memory", "image#wpvol", "pulseaudio", "network", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{id}"
+    },
+
+    "memory": {
+        "format": "RAM {percentage}%"
+    },
+
+    "image#wpvol": {
+        "exec": "/home/ZyArch/.config/waybar/vol/wpvol.sh",
+        "interval": 10,
+        "signal": 8,
+        "size": 22,
+        "tooltip": true,
+        "on-scroll-up": "/home/ZyArch/.config/waybar/vol/wpvol.sh up",
+        "on-scroll-down": "/home/ZyArch/.config/waybar/vol/wpvol.sh down",
+        "on-click": "/home/ZyArch/.config/waybar/vol/wpvol.sh mute"
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTED",
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "NET {signalStrength}%",
+        "format-ethernet": "NET",
+        "format-disconnected": "NET OFF"
+    },
+
+    "tray": {
+        "spacing": 8
+    }
+}

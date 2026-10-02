@@ -1,0 +1,25 @@
+{
+    "logo": {
+        "source": "/home/ZyArch/.config/fastfetch/logo2.png",
+        "type": "kitty-direct",
+        "width": 16,
+        "height": 14
+    },
+    "modules": [
+        "title",
+        "separator",
+        "os",
+        "host",
+        "kernel",
+        "uptime",
+        "packages",
+        "shell",
+        "wm",
+        "terminal",
+        "cpu",
+        "gpu",
+        "memory",
+        "disk",
+        "break",
+    ]
+}

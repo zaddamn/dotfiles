@@ -28,8 +28,6 @@ hl.monitor({
     position = "auto",
     scale    = "auto",
 })
-
-
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -57,7 +55,7 @@ local menu        = "wofi --show drun --style /home/ZyArch/.config/wofi/style.cs
 hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar")
     hl.exec_cmd("wl-paste --watch cliphist store")
-    hl.exec_cmd("mpvpaper '*' -o 'loop-file=inf volume=100 input-ipc-server=/tmp/mpvsocket' /home/ZyArch/Videos/ocean.mkv")
+    hl.exec_cmd("mpvpaper '*' -o 'image-display-duration=inf loop-file=inf input-ipc-server=/tmp/mpvsocket' /home/ZyArch/Pictures/Wallpapers/still.png")
 end)
 
 
@@ -275,6 +273,7 @@ hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tee ~/Pictures/Screen
 hl.bind("CTRL + SHIFT + B", hl.dsp.exec_cmd("brave"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/cliphist-wofi.sh text"))
 hl.bind(mainMod .. " + SHIFT + I", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/cliphist-wofi.sh img"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/wallpaper-swap.sh"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))

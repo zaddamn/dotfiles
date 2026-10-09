@@ -7,13 +7,24 @@
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
     "modules-right": ["memory", "image#wpvol", "pulseaudio", "network", "tray"],
-
     "hyprland/workspaces": {
         "format": "{id}"
     },
 
     "memory": {
         "format": "RAM {percentage}%"
+    },
+    
+    "custom/nowplaying": {
+    "exec": "~/.config/hypr/scripts/now-playing.sh",
+    "interval": 5,
+    "max-length": 40
+    },
+   
+    "image#cover": {
+    "path": "/tmp/now-playing-cover.jpg",
+    "size": 20,
+    "interval": 5
     },
 
     "image#wpvol": {

@@ -55,7 +55,8 @@ local menu        = "wofi --show drun --style /home/ZyArch/.config/wofi/style.cs
 hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar")
     hl.exec_cmd("wl-paste --watch cliphist store")
-    hl.exec_cmd("mpvpaper '*' -o 'image-display-duration=inf loop-file=inf input-ipc-server=/tmp/mpvsocket' /home/ZyArch/Pictures/Wallpapers/still.png")
+    hl.exec_cmd("mako")
+    hl.exec_cmd("mpvpaper '*' -o 'loop-file=inf volume=100 input-ipc-server=/tmp/mpvsocket' /home/ZyArch/Videos/pikachu-pixel-art.mkv")
 end)
 
 
@@ -270,7 +271,8 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy --type image/png"))
-hl.bind("CTRL + SHIFT + B", hl.dsp.exec_cmd("brave"))
+hl.bind("CTRL + SHIFT + S", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy --type image/png"))
+hl.bind("CTRL + SHIFT + F", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/cliphist-wofi.sh text"))
 hl.bind(mainMod .. " + SHIFT + I", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/cliphist-wofi.sh img"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/wallpaper-swap.sh"))
@@ -353,6 +355,7 @@ hl.window_rule({
 
     no_focus = true,
 })
+
 
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({

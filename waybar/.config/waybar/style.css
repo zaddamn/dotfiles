@@ -2,9 +2,8 @@
     font-family: JetBrainsMono Nerd Font, FontAwesome, sans-serif;
     font-size: 13px;
 }
-
 window#waybar {
-    background-color: rgba(10, 22, 40, 0.55);
+    background-color: rgba(10, 22, 40, 0.95);
     color: #cfe3ee;
     border-bottom: 2px solid rgba(42, 157, 188, 0.4);
 }

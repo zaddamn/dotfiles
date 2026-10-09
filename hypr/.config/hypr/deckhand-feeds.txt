@@ -2,3 +2,5 @@ nasa|https://www.youtube.com/watch?v=tj4knR4r1UU
 japan|https://www.youtube.com/watch?v=rVLCmSXhXtg
 maldives|https://www.youtube.com/watch?v=_BMi3usEwi8
 austria|https://www.youtube.com/watch?v=NIuO6hrFTrg
+Fireplace|https://www.youtube.com/watch?v=SgU-GMYc_xc
+pikachu|/home/ZyArch/Videos/pikachu-pixel-art.mkv

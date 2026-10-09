@@ -31,7 +31,11 @@ elif [ "$CHOICE" = "- delete a feed" ]; then
     cat /tmp/deckhand-feeds.tmp > "$FEEDS"
     rm -f /tmp/deckhand-feeds.tmp
 elif [[ "$CHOICE" == http* ]]; then
-    start "$VIDEO_OPTS" "$CHOICE"
+    if yt-dlp --get-title "$CHOICE" &>/dev/null; then
+        start "$VIDEO_OPTS" "$CHOICE"
+    else
+        notify-send "Deckhand" "That link doesn't look valid, nothing changed."
+    fi
 else
     URL=$(awk -F'|' -v n="$CHOICE" '$1==n {print $2; exit}' "$FEEDS")
     [ -z "$URL" ] || [ "$URL" = "Link:" ] && exit 0

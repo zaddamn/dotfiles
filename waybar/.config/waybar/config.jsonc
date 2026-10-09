@@ -5,10 +5,43 @@
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": [],
+    "modules-center": ["custom/min1", "custom/min2", "custom/min3", "custom/min4"],
     "modules-right": ["memory", "image#wpvol", "pulseaudio", "network", "tray"],
     "hyprland/workspaces": {
         "format": "{id}"
+    },
+
+
+    "custom/min1": {
+        "exec": "/home/ZyArch/.config/waybar/minimized.sh 1",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "/home/ZyArch/.config/waybar/restore.sh 1",
+        "tooltip": false
+    },
+
+    "custom/min2": {
+        "exec": "/home/ZyArch/.config/waybar/minimized.sh 2",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "/home/ZyArch/.config/waybar/restore.sh 2",
+        "tooltip": false
+    },
+
+    "custom/min3": {
+        "exec": "/home/ZyArch/.config/waybar/minimized.sh 3",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "/home/ZyArch/.config/waybar/restore.sh 3",
+        "tooltip": false
+    },
+
+    "custom/min4": {
+        "exec": "/home/ZyArch/.config/waybar/minimized.sh 4",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "/home/ZyArch/.config/waybar/restore.sh 4",
+        "tooltip": false
     },
 
     "memory": {

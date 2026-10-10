@@ -376,4 +376,4 @@ hl.window_rule({
     float = true,
 })
 
-hl.bind(mainMod .. " + B", hl.dsp.window.move({ workspace = "special:magic", follow = false }))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("/home/ZyArch/.config/hypr/scripts/minimize.sh"))

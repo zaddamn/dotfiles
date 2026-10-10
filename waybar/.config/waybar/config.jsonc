@@ -16,6 +16,7 @@
         "exec": "/home/ZyArch/.config/waybar/minimized-icon.sh 1",
         "interval": 2,
         "size": 22,
+        "signal": 9,
         "on-click": "/home/ZyArch/.config/waybar/restore.sh 1",
         "tooltip": false
     },
@@ -23,6 +24,7 @@
     "image#min2": {
         "exec": "/home/ZyArch/.config/waybar/minimized-icon.sh 2",
         "size": 22,
+        "signal": 9,
         "interval": 2,
         "on-click": "/home/ZyArch/.config/waybar/restore.sh 2",
         "tooltip": false
@@ -31,6 +33,7 @@
     "image#min3": {
         "exec": "/home/ZyArch/.config/waybar/minimized-icon.sh 3",
         "size": 22,
+        "signal": 9,
         "interval": 2,
         "on-click": "/home/ZyArch/.config/waybar/restore.sh 3",
         "tooltip": false
@@ -39,6 +42,7 @@
     "image#min4": {
         "exec": "/home/ZyArch/.config/waybar/minimized-icon.sh 4",
         "size": 22,
+        "signal": 9,
         "interval": 2,
         "on-click": "/home/ZyArch/.config/waybar/restore.sh 4",
         "tooltip": false

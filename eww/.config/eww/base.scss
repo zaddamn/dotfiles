@@ -92,3 +92,9 @@ $track:  rgba(170, 190, 240, 0.13);
 .mode.on .mi { color: $on; }
 
 .player.idle { opacity: 0.6; }
+.clk-num { margin-left: 29px; }
+.clk-mon { font-family: "Porter"; font-size: 47px; color: #ffffff; margin-left: 75px; margin-top: 39px; }
+.clk-time { font-family: "Porter"; font-size: 17px; color: #ffffff; margin-left: 77px; margin-top: 96px; }
+.clk-line { min-width: 44px; min-height: 1px; background-color: #ffffff; margin-left: 77px; margin-top: 124px; }
+.clk-wk { font-family: "Porter"; font-size: 12px; color: #ffffff; letter-spacing: 9px; margin-left: 10px; margin-bottom: 68px; }
+.clk-wx { font-family: "Glacial Indifference"; font-size: 13px; font-weight: bold; color: #ffffff; margin-left: 77px; margin-top: 139px; }

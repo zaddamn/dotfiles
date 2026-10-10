@@ -104,3 +104,20 @@
             (eventbox :cursor "pointer" :onclick "~/.config/eww/mode.sh one"
               (box :class {loop == "Track" ? "mode on" : "mode"}
                 (label :class "mi inf" :text "∞")))))))))
+(defpoll clk_mon  :interval "60s" "date +%B | tr a-z A-Z")
+(defpoll clk_wk   :interval "60s" "date +%A | tr a-z A-Z")
+(defpoll clk_time :interval "1s"  "date +%H:%M")
+(defpoll clk_img :interval "60s" "__HOME__/.config/eww/clockimg.sh")
+(defpoll clk_wx :interval "300s" "__HOME__/.config/eww/weather.sh")
+(defwindow clock
+  :monitor 0
+  :stacking "bg"
+  :exclusive false
+  :geometry (geometry :x "37px" :y "15px" :width "340px" :height "260px" :anchor "bottom left")
+  (overlay
+    (image :class "clk-num" :halign "start" :valign "start" :path clk_img)
+    (label :class "clk-wk" :halign "start" :valign "end" :angle 90 :text clk_wk)
+    (label :class "clk-mon" :halign "start" :valign "start" :text clk_mon)
+    (label :class "clk-time" :halign "start" :valign "start" :text clk_time)
+    (box :class "clk-line" :halign "start" :valign "start")
+    (label :class "clk-wx" :halign "start" :valign "start" :text clk_wx)))

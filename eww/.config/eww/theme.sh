@@ -44,3 +44,4 @@ sed -e "s/__W__/${win}/" -e "s/__VW__/${vw}/g" -e "s/__KW__/${kw}/g" \
 eww kill 2>/dev/null; pkill -x eww 2>/dev/null; sleep 1
 eww daemon; sleep 1; eww open desk
 echo "card ${CARD}px  scale ${s}  palette midnight+fire"
+eww open clock

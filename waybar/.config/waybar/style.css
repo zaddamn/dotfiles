@@ -40,3 +40,50 @@ window#waybar {
     color: #f53c3c;
 }
 #image.wpvol { padding: 0 8px; }
+
+#custom-min1, #custom-min2, #custom-min3, #custom-min4 {
+  color: #E8C987;
+  background: #0f2238;
+  border: 1px solid #1b4b7a;
+  border-radius: 8px;
+  margin: 3px 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+#custom-min1:hover, #custom-min2:hover, #custom-min3:hover, #custom-min4:hover {
+  background: #1b4b7a;
+  border-color: #E8C987;
+  box-shadow: 0 0 10px rgba(232, 201, 135, 0.6);
+}
+
+#custom-min1, #custom-min2, #custom-min3, #custom-min4 {
+  margin: 3px 2px;
+}
+
+#custom-min1:hover, #custom-min2:hover, #custom-min3:hover, #custom-min4:hover {
+  box-shadow: 0 0 5px rgba(232, 201, 135, 0.35);
+}
+
+#image.min1, #image.min2, #image.min3, #image.min4 {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin: 3px 2px;
+  padding: 0 6px;
+}
+
+#image.min1:hover, #image.min2:hover, #image.min3:hover, #image.min4:hover {
+  background: #1b4b7a;
+  border-color: #E8C987;
+  box-shadow: 0 0 10px rgba(232, 201, 135, 0.6);
+}
+
+#image.empty, #image.empty:hover {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}

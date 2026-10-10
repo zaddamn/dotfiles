@@ -58,6 +58,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("mako")
     hl.exec_cmd("mpvpaper '*' -o 'loop-file=inf volume=100 input-ipc-server=/tmp/mpvsocket' /home/ZyArch/Videos/pikachu-pixel-art.mkv")
+    hl.exec_cmd("eww open desk")
 end)
 
 

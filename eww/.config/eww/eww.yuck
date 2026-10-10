@@ -1,0 +1,36 @@
+(defpoll date    :interval "60s" "date '+%A, %d %B'")
+(defpoll time    :interval "1s"  "date '+%H:%M'")
+(defpoll title   :interval "2s"  "playerctl metadata title 2>/dev/null || echo 'Nothing playing'")
+(defpoll artist  :interval "2s"  "playerctl metadata artist 2>/dev/null")
+(defpoll art     :interval "2s"  "~/.config/eww/art.sh")
+(defpoll playing :interval "1s"  "playerctl status 2>/dev/null")
+(defpoll ic_prev  :interval "1h" "~/.config/eww/icon.sh prev")
+(defpoll ic_play  :interval "1h" "~/.config/eww/icon.sh play")
+(defpoll ic_pause :interval "1h" "~/.config/eww/icon.sh pause")
+(defpoll ic_next  :interval "1h" "~/.config/eww/icon.sh next")
+(deflisten bars :initial "[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]" "~/.config/eww/cava.sh")
+
+(defwindow desk
+  :monitor 0
+  :stacking "bg"
+  :exclusive false
+  :geometry (geometry :x "30px" :y "50px" :anchor "top left" :width "252px")
+  (box :orientation "v" :space-evenly false :class "wrap"
+    (label :class "date" :halign "start" :text date)
+    (label :class "time" :halign "start" :text time)
+
+    (box :class "player" :orientation "h" :space-evenly false
+      (box :class "art" :valign "center" :style "background-image: url('${art}');")
+      (box :orientation "v" :space-evenly false :valign "center" :class "info"
+        (label :class "title"  :halign "start" :limit-width 18 :text title)
+        (label :class "artist" :halign "start" :limit-width 22 :text artist))
+      (box :class "ctls" :orientation "h" :space-evenly false
+           :halign "end" :hexpand true :valign "center"
+        (button :class "ctl" :onclick "playerctl previous" (label :text ic_prev))
+        (button :class "ctl" :onclick "playerctl play-pause"
+          (label :text {playing == "Playing" ? ic_pause : ic_play}))
+        (button :class "ctl" :onclick "playerctl next" (label :text ic_next))))
+
+    (box :class "viz" :orientation "h" :halign "start" :valign "start" :height 34
+      (for b in bars
+        (box :class "bar" :valign "start" :style "min-height: ${b}px;")))))

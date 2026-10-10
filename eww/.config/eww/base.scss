@@ -1,0 +1,25 @@
+* { all: unset; }
+$font: "SF Pro Display", "SF Pro", "Inter", sans-serif;
+
+.wrap   { padding: 6px; }
+.date   { color: $date; font-family: $font; font-size: 12px; font-weight: 500; margin-bottom: 1px; }
+.time   { color: $text; font-family: $font; font-size: 55px; font-weight: 300;
+          letter-spacing: -2px; margin-bottom: 8px;
+          text-shadow: 0 0 24px $glow, 0 1px 10px rgba(0, 1, 23, 0.8); }
+
+.player { background-image: linear-gradient(to bottom right, $card, $card2);
+          border: 1px solid $line; border-radius: 10px; padding: 7px 8px 7px 7px; }
+.art    { min-width: 38px; min-height: 38px; margin-right: 10px;
+          background-color: #0f1f4c; background-size: cover; background-position: center;
+          border-radius: 6px; }
+.title  { color: $text; font-family: $font; font-size: 11px; font-weight: 600; }
+.artist { color: $dim;  font-family: $font; font-size: 9px;  font-weight: 400; margin-top: 2px; }
+
+.ctls   { margin: 0 0 0 12px; }
+.ctl    { color: $accent; font-family: "Symbols Nerd Font"; font-size: 9px;
+          padding: 1px 5px; opacity: 0.85; }
+.ctl:hover { opacity: 1; }
+
+.viz    { margin-top: 10px; }
+.bar    { min-width: 6px; margin-right: 4px; border-radius: 2px;
+          background-image: linear-gradient(to bottom, $b1, $b2, $b3, $b4); }

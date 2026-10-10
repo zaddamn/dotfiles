@@ -375,3 +375,5 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.bind(mainMod .. " + B", hl.dsp.window.move({ workspace = "special:magic", follow = false }))

@@ -24,7 +24,7 @@
   :monitor 0
   :stacking "bg"
   :exclusive false
-  :geometry (geometry :x "20px" :y "20px" :anchor "top left" :width "334px")
+  :geometry (geometry __GEO__ :width "__W__px")
   (box :orientation "v" :space-evenly false :class "wrap"
     (eventbox :class "hz"
       (box :class {playing == "" ? "player idle" : "player"} :orientation "v" :space-evenly false
@@ -34,23 +34,23 @@
             (box :class {art == "" ? "art ph" : "art"} :valign "start"
                :style "background-image: url('${art}');"
             (image :class "artnote" :visible {art == ""} :hexpand true :vexpand true
-                   :path "/home/ZyArch/.config/eww/icons/note_w.svg" :image-width 18 :image-height 23)))
+                   :path "__HOME__/.config/eww/icons/note_w.svg" :image-width __N3W__ :image-height __N3H__)))
           (box :class "txt" :orientation "v" :space-evenly false :hexpand true :valign "center"
             (box :class "hdr" :orientation "h" :space-evenly false
-              (image :class "hnote" :path "/home/ZyArch/.config/eww/icons/note_c.svg" :image-width 6 :image-height 7)
+              (image :class "hnote" :path "__HOME__/.config/eww/icons/note_c.svg" :image-width __N1W__ :image-height __N1H__)
               (label :class "hname" :halign "start" :hexpand true :text src)
-              (box :class "eqw" :orientation "h" :space-evenly false :valign "center" (box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[11] ?: 0) * (13 - 1) * 0.70 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[10] ?: 0) * (13 - 1) * 0.73 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[9] ?: 0) * (13 - 1) * 0.75 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[8] ?: 0) * (13 - 1) * 0.78 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[7] ?: 0) * (13 - 1) * 0.80 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[6] ?: 0) * (13 - 1) * 0.83 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[5] ?: 0) * (13 - 1) * 0.86 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[4] ?: 0) * (13 - 1) * 0.88 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[3] ?: 0) * (13 - 1) * 0.91 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[2] ?: 0) * (13 - 1) * 0.93 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[1] ?: 0) * (13 - 1) * 0.96 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[0] ?: 0) * (13 - 1) * 0.99 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[0] ?: 0) * (13 - 1) * 0.99 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[1] ?: 0) * (13 - 1) * 0.96 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[2] ?: 0) * (13 - 1) * 0.93 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[3] ?: 0) * (13 - 1) * 0.91 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[4] ?: 0) * (13 - 1) * 0.88 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[5] ?: 0) * (13 - 1) * 0.86 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[6] ?: 0) * (13 - 1) * 0.83 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[7] ?: 0) * (13 - 1) * 0.80 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[8] ?: 0) * (13 - 1) * 0.78 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[9] ?: 0) * (13 - 1) * 0.75 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[10] ?: 0) * (13 - 1) * 0.73 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(1 + isplay * (eq[11] ?: 0) * (13 - 1) * 0.70 / 100, 0)}px;")))
+              (box :class "eqw" :orientation "h" :space-evenly false :valign "center" (box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[11] ?: 0) * (__EQH__ - __EQD__) * 0.70 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[10] ?: 0) * (__EQH__ - __EQD__) * 0.73 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[9] ?: 0) * (__EQH__ - __EQD__) * 0.75 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[8] ?: 0) * (__EQH__ - __EQD__) * 0.78 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[7] ?: 0) * (__EQH__ - __EQD__) * 0.80 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[6] ?: 0) * (__EQH__ - __EQD__) * 0.83 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[5] ?: 0) * (__EQH__ - __EQD__) * 0.86 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[4] ?: 0) * (__EQH__ - __EQD__) * 0.88 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[3] ?: 0) * (__EQH__ - __EQD__) * 0.91 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[2] ?: 0) * (__EQH__ - __EQD__) * 0.93 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[1] ?: 0) * (__EQH__ - __EQD__) * 0.96 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[0] ?: 0) * (__EQH__ - __EQD__) * 0.99 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[0] ?: 0) * (__EQH__ - __EQD__) * 0.99 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[1] ?: 0) * (__EQH__ - __EQD__) * 0.96 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[2] ?: 0) * (__EQH__ - __EQD__) * 0.93 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[3] ?: 0) * (__EQH__ - __EQD__) * 0.91 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[4] ?: 0) * (__EQH__ - __EQD__) * 0.88 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[5] ?: 0) * (__EQH__ - __EQD__) * 0.86 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[6] ?: 0) * (__EQH__ - __EQD__) * 0.83 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[7] ?: 0) * (__EQH__ - __EQD__) * 0.80 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[8] ?: 0) * (__EQH__ - __EQD__) * 0.78 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[9] ?: 0) * (__EQH__ - __EQD__) * 0.75 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[10] ?: 0) * (__EQH__ - __EQD__) * 0.73 / 100, 0)}px;")(box :class "eqb" :valign "center" :style "min-height: ${round(__EQD__ + isplay * (eq[11] ?: 0) * (__EQH__ - __EQD__) * 0.70 / 100, 0)}px;")))
             (label :class "title" :halign "start" :limit-width 54 :show-truncated false :text title
-                   :style "font-size: ${round(0.2857 * (strlength(title) > 22 ? (1160 / strlength(title) > 22 ? 1160 / strlength(title) : 22) : 53), 0)}px;")
+                   :style "font-size: ${round(__S__ * (strlength(title) > 22 ? (1160 / strlength(title) > 22 ? 1160 / strlength(title) : 22) : 53), 0)}px;")
             (label :class "artist" :halign "start" :limit-width 58 :show-truncated false :text artist
-                   :style "font-size: ${round(0.2857 * (strlength(artist) > 35 ? (1250 / strlength(artist) > 22 ? 1250 / strlength(artist) : 22) : 37), 0)}px;")))
+                   :style "font-size: ${round(__S__ * (strlength(artist) > 35 ? (1250 / strlength(artist) > 22 ? 1250 / strlength(artist) : 22) : 37), 0)}px;")))
 
         (overlay :class "seek"
           (box :class "sspace")
           (box :class "strack" :valign "center")
           (box :class "srow" :orientation "h" :space-evenly false :halign "start" :valign "center"
             (box :class "sfill" :valign "center"
-                 :style "min-width: ${round(pct * (280 - 6) / 100, 0)}px;")
+                 :style "min-width: ${round(pct * (__TW__ - __DW__) / 100, 0)}px;")
             (box :class "sdot" :valign "center"))
           (scale :class "ghost" :min 0 :max 100 :value pct
                  :onchange "~/.config/eww/seek.sh {}"))
@@ -60,38 +60,38 @@
 
         (box :class "ctls" :orientation "h" :space-evenly false
           (eventbox :class "btn" :cursor "pointer" :onclick "playerctl previous"
-            (image :class "skip" :path "/home/ZyArch/.config/eww/icons/rew.svg" :image-width 17 :image-height 10))
+            (image :class "skip" :path "__HOME__/.config/eww/icons/rew.svg" :image-width __SKW__ :image-height __SKH__))
           (eventbox :cursor "pointer" :onclick "playerctl play-pause; sleep 0.2; eww update playing=$(playerctl status)"
             (box :class {playing == "Playing" ? "pp" : "pp off"} :halign "center" :valign "center"
-              (image :path {playing == "Playing" ? "/home/ZyArch/.config/eww/icons/pause.svg" : "/home/ZyArch/.config/eww/icons/play.svg"}
-                     :image-width 11 :image-height 11)))
+              (image :path {playing == "Playing" ? "__HOME__/.config/eww/icons/pause.svg" : "__HOME__/.config/eww/icons/play.svg"}
+                     :image-width __PPS__ :image-height __PPS__)))
           (eventbox :class "btn" :cursor "pointer" :onclick "playerctl next"
-            (image :class "skip" :path "/home/ZyArch/.config/eww/icons/fwd.svg" :image-width 17 :image-height 10))
+            (image :class "skip" :path "__HOME__/.config/eww/icons/fwd.svg" :image-width __SKW__ :image-height __SKH__))
           (box :class "vol" :orientation "h" :space-evenly false :hexpand true
                :halign "end" :valign "center"
             (eventbox :cursor "pointer" :onclick "~/.config/eww/vol.sh mute"
-              (image :class {muted == "yes" ? "vi off" : "vi"} :path "/home/ZyArch/.config/eww/icons/vol_lo.svg" :image-width 7 :image-height 9))
+              (image :class {muted == "yes" ? "vi off" : "vi"} :path "__HOME__/.config/eww/icons/vol_lo.svg" :image-width __LOW__ :image-height __LOH__))
             (overlay :class {muted == "yes" ? "vsl off" : "vsl"} :valign "center"
               (box :class "vspace")
               (box :class "vtrack" :valign "center")
               (box :class "vrow" :orientation "h" :space-evenly false :halign "start" :valign "center"
                 (box :class "vfill" :valign "center"
-                     :style "min-width: ${round(vol * (97 - 9) / 100, 0)}px;")
+                     :style "min-width: ${round(vol * (__VW__ - __KW__) / 100, 0)}px;")
                 (box :class "vknob" :valign "center"))
               (scale :class "ghost" :min 0 :max 100 :value vol
                      :onchange "eww update vol={}; ~/.config/eww/vol.sh set {}"))
-            (image :class "vi hi" :path "/home/ZyArch/.config/eww/icons/vol_hi.svg" :image-width 10 :image-height 10)))
+            (image :class "vi hi" :path "__HOME__/.config/eww/icons/vol_hi.svg" :image-width __HIS__ :image-height __HIS__)))
 
         (box :class "foot" :orientation "h" :space-evenly false
           (box :class "ntile" :valign "center"
-            (image :class "ntl" :path "/home/ZyArch/.config/eww/icons/note_w.svg" :image-width 10 :image-height 12))
+            (image :class "ntl" :path "__HOME__/.config/eww/icons/note_w.svg" :image-width __N2W__ :image-height __N2H__))
           (box :orientation "v" :space-evenly false :valign "center"
             (label :class "albl" :halign "start" :xalign 0 :text "ALBUM")
             (label :class "aname" :halign "start" :xalign 0 :limit-width 62 :show-truncated false :text ctx
-                   :style "font-size: ${round(0.2857 * (strlength(ctx) > 40 ? (1350 / strlength(ctx) > 22 ? 1350 / strlength(ctx) : 22) : 33), 0)}px;"))
+                   :style "font-size: ${round(__S__ * (strlength(ctx) > 40 ? (1350 / strlength(ctx) > 22 ? 1350 / strlength(ctx) : 22) : 33), 0)}px;"))
           (eventbox :class "btn" :cursor "pointer" :hexpand true :halign "end" :valign "center"
                     :onclick "eww update showmodes=${!showmodes}"
-            (image :class "side" :path "/home/ZyArch/.config/eww/icons/list.svg" :image-width 10 :image-height 7)))
+            (image :class "side" :path "__HOME__/.config/eww/icons/list.svg" :image-width __LSW__ :image-height __LSH__)))
 
         (revealer :reveal showmodes :transition "slidedown" :duration "250ms"
           (box :class "modes" :orientation "h" :space-evenly false :halign "center" :spacing 18

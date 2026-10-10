@@ -1,25 +1,94 @@
+@function u($n) { @return round($n * $s * 1px); }
+
 * { all: unset; }
-$font: "SF Pro Display", "SF Pro", "Inter", sans-serif;
+$font:  "SF Pro Rounded", "SF Pro Display", "SF Pro Text", "SF Pro", "Inter", sans-serif;
+$icons: "Symbols Nerd Font";
 
-.wrap   { padding: 6px; }
-.date   { color: $date; font-family: $font; font-size: 12px; font-weight: 500; margin-bottom: 1px; }
-.time   { color: $text; font-family: $font; font-size: 55px; font-weight: 300;
-          letter-spacing: -2px; margin-bottom: 8px;
-          text-shadow: 0 0 24px $glow, 0 1px 10px rgba(0, 1, 23, 0.8); }
+// midnight blue + small fire accents ($blue, $blue2, $fire, $fire2 are set by theme.sh)
+$ink:    #e8edf8;
+$muted:  #8d9ac0;
+$label:  #66739a;
+$slate:  #26304f;
+$on:     #f2f6ff;
+$edge:   rgba(150, 175, 230, 0.16);
+$track:  rgba(170, 190, 240, 0.13);
 
-.player { background-image: linear-gradient(to bottom right, $card, $card2);
-          border: 1px solid $line; border-radius: 10px; padding: 7px 8px 7px 7px; }
-.art    { min-width: 38px; min-height: 38px; margin-right: 10px;
-          background-color: #0f1f4c; background-size: cover; background-position: center;
-          border-radius: 6px; }
-.title  { color: $text; font-family: $font; font-size: 11px; font-weight: 600; }
-.artist { color: $dim;  font-family: $font; font-size: 9px;  font-weight: 400; margin-top: 2px; }
+.wrap   { padding: u(60); }
 
-.ctls   { margin: 0 0 0 12px; }
-.ctl    { color: $accent; font-family: "Symbols Nerd Font"; font-size: 9px;
-          padding: 1px 5px; opacity: 0.85; }
-.ctl:hover { opacity: 1; }
+/* surface: deep midnight glass, faint sheen, fine border */
+.player { background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0) 45%),
+                            linear-gradient(to bottom right, rgba(20, 28, 52, 0.94), rgba(9, 13, 27, 0.94));
+          border: 1px solid $edge; border-radius: u(64);
+          padding: u(34) u(28) u(37) u(28);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 u(14) u(36) rgba(1, 3, 12, 0.5); }
+.hz:hover .player { border-color: rgba($fire, 0.35); }
 
-.viz    { margin-top: 10px; }
-.bar    { min-width: 6px; margin-right: 4px; border-radius: 2px;
-          background-image: linear-gradient(to bottom, $b1, $b2, $b3, $b4); }
+/* top: art + text */
+.top    { margin-bottom: u(44); }
+.art    { min-width: u(275); min-height: u(275); border-radius: u(48);
+          background-size: cover; background-position: center;
+          box-shadow: 0 u(6) u(16) rgba(1, 3, 12, 0.5); }
+.art.ph { background-color: #1c2540; }
+.artnote { opacity: 0.7; }
+.txt    { margin-left: u(44); }
+.hdr    { margin-bottom: u(14); }
+.hnote  { margin-right: u(14); }
+.hname  { color: $muted; font-family: $font; font-size: u(30); font-weight: 600; }
+.eqw    { margin-left: u(10); min-height: u(44); }
+.eqb    { min-width: u(4); margin-left: u(3); border-radius: u(2);
+          background-image: linear-gradient(to bottom, $fire2, $fire 50%, $fire2); }
+.title  { color: $ink; font-family: $font; font-size: u(53); font-weight: 700; }
+.artist { color: $muted; font-family: $font; font-size: u(37); font-weight: 500; margin-top: u(8); }
+
+/* progress bar: thin muted track, fire fill + dot */
+.sspace { min-height: u(20); }
+.strack { min-height: u(12); border-radius: u(6); background-color: $track; }
+.sfill  { min-height: u(12); border-radius: u(6);
+          background-image: linear-gradient(to right, $fire, $fire2); }
+.sdot   { min-width: u(20); min-height: u(20); border-radius: u(10); background-color: $fire2;
+          box-shadow: 0 0 u(6) rgba($fire, 0.35); }
+.ghost         { opacity: 0; min-height: u(34); }
+.ghost trough  { min-height: u(34); }
+.ghost slider  { min-width: u(20); min-height: u(34); }
+
+.times  { margin: u(20) u(2) u(30) u(2); }
+.t      { color: $muted; opacity: 0.7; font-family: $font; font-size: u(22); font-weight: 500; }
+
+/* controls */
+.btn:hover .skip { opacity: 0.8; }
+.pp     { min-width: u(109); min-height: u(109); margin: 0 u(54); border-radius: u(55);
+          background-color: $blue; box-shadow: 0 0 u(14) rgba($blue, 0.22); }
+.pp.off { background-color: $slate; box-shadow: none; }
+.vol    { margin-left: u(24); }
+.vi     { margin: 0 u(18); }
+.vi.off { opacity: 0.55; }
+.hi     { margin-right: 0; }
+
+/* volume slider: blue fill, fire knob */
+.vspace { min-width: u(340); min-height: u(34); }
+.vtrack { min-height: u(12); border-radius: u(6); background-color: $track; }
+.vfill  { min-height: u(12); border-radius: u(6); background-color: $blue; }
+.vknob  { min-width: u(32); min-height: u(32); border-radius: u(16); background-color: $fire2;
+          box-shadow: 0 u(2) u(6) rgba(1, 3, 12, 0.5); }
+.vsl.off { opacity: 0.30; }
+
+/* footer: album row */
+.foot   { margin-top: u(30); }
+.ntile  { min-width: u(84); min-height: u(84); margin-right: u(28); border-radius: u(20);
+          background-image: linear-gradient(to bottom right, #1f2a4a, #0f162b);
+          border: 1px solid $edge; }
+.albl   { color: $label; font-family: $font; font-size: u(22); font-weight: 700;
+          letter-spacing: u(5); min-width: u(130); }
+.aname  { color: #c3cce2; font-family: $font; font-size: u(33); font-weight: 600; margin-top: u(4); }
+.btn:hover .side { opacity: 0.8; }
+
+/* shuffle / repeat / loop-one */
+.modes  { margin-top: u(34); }
+.mode   { min-width: u(96); min-height: u(64); border-radius: u(18);
+          background-color: rgba(170, 190, 240, 0.08); }
+.mode.on { background-color: $blue; }
+.mi     { color: $muted; font-family: $icons; font-size: u(30); }
+.inf    { font-family: $font; font-size: u(40); font-weight: 600; }
+.mode.on .mi { color: $on; }
+
+.player.idle { opacity: 0.6; }

@@ -93,8 +93,8 @@ $track:  rgba(170, 190, 240, 0.13);
 
 .player.idle { opacity: 0.6; }
 .clk-num { margin-left: 29px; }
-.clk-mon { font-family: "Porter"; font-size: 47px; color: #ffffff; margin-left: 75px; margin-top: 39px; }
-.clk-time { font-family: "Porter"; font-size: 17px; color: #ffffff; margin-left: 77px; margin-top: 96px; }
-.clk-line { min-width: 44px; min-height: 1px; background-color: #ffffff; margin-left: 77px; margin-top: 124px; }
-.clk-wk { font-family: "Porter"; font-size: 12px; color: #ffffff; letter-spacing: 9px; margin-left: 10px; margin-bottom: 68px; }
-.clk-wx { font-family: "Glacial Indifference"; font-size: 13px; font-weight: bold; color: #ffffff; margin-left: 77px; margin-top: 139px; }
+.clk-mon { font-family: "Allura"; font-size: 64px; color: #ffffff; margin-left: 75px; margin-top: 39px; }
+.clk-time { font-family: "SF Pro Text"; font-weight: 600; font-size: 21px;; color: #ffffff; text-shadow: 1px 1px 0 rgba(247, 196, 106, 0.8); margin-left: 77px; margin-top: 96px; }
+.clk-line { min-width: 44px; min-height: 1px; background-color: rgba(143, 176, 238, 0.30); margin-left: 77px; margin-top: 124px; }
+.clk-wk { font-family: "SF Pro Text"; font-weight: 600; font-size: 12px; color: #ffffff; text-shadow: 1px 1px 0 rgba(247, 196, 106, 0.8); letter-spacing: 9px; margin-left: 22px; margin-bottom: 68px; }
+.clk-wx { font-family: "SF Pro Text"; font-size: 13px; font-weight: 600; color: #ffffff; margin-left: 77px; margin-top: 139px; }
